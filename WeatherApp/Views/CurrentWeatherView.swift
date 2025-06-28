@@ -11,13 +11,14 @@ struct CurrentWeatherView: View {
             .ignoresSafeArea()
             VStack {
                 Text("Duluth")
-                Text("73")
-                    .font(.largeTitle)
+                Text("73°")
+                    .font(.system(size: 80, weight: .thin))
                 Text("Cloudy")
                 HStack {
-                    Text("H: 87")
-                    Text("L: 68")
+                    Text("H: 87°")
+                    Text("L: 68°")
                 }
+                .font(.system(size: 14))
             }
             .foregroundColor(Color.theme.accent)
         }
