@@ -4,7 +4,7 @@ struct CurrentWeatherView: View {
     var body: some View {
         ZStack {
             LinearGradient(
-                gradient: Gradient(colors: [.blue, .cyan]),
+                gradient: Gradient(colors: [Color.theme.backgroundStart, Color.theme.backgroundEnd]),
                 startPoint: .top,
                 endPoint: .bottom
             )
@@ -19,6 +19,7 @@ struct CurrentWeatherView: View {
                     Text("L: 68")
                 }
             }
+            .foregroundColor(Color.theme.accent)
         }
     }
 }

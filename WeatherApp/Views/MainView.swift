@@ -15,7 +15,7 @@ struct MainView: View {
                     Label("Weather", systemImage: "cloud.sun.fill")
                 }
         }
-        .tint(.white)
+        .tint(Color.theme.accent)
     }
 }
 
