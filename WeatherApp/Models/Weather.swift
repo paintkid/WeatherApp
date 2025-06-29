@@ -8,8 +8,8 @@ struct WeatherResponse: Codable {
 
 struct MainInfo: Codable {
     let temp: Double
-    let temp_min: Double
-    let temp_max: Double
+    let tempMin: Double
+    let tempMax: Double
 }
 
 struct WeatherInfo: Codable {

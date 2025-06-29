@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct CurrentWeatherView: View {
+    
+    @StateObject private var viewModel = WeatherViewModel()
+    
     var body: some View {
         ZStack {
             LinearGradient(
@@ -10,13 +13,17 @@ struct CurrentWeatherView: View {
             )
             .ignoresSafeArea()
             VStack {
-                Text("Duluth")
-                Text("73°")
+                Text(viewModel.cityName)
+                    .font(.largeTitle)
+                    .fontWeight(.medium)
+                Text(viewModel.temperature)
                     .font(.system(size: 80, weight: .thin))
-                Text("Cloudy")
+                Text(viewModel.weatherDescription)
+                    .font(.headline)
+                    .fontWeight(.medium)
                 HStack {
-                    Text("H: 87°")
-                    Text("L: 68°")
+                    Text(viewModel.highTemp)
+                    Text(viewModel.lowTemp)
                 }
                 .font(.system(size: 14))
             }
